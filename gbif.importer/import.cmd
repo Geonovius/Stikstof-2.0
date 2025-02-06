@@ -1,1 +1,1 @@
-c:\OSGeo4W\bin\ogr2ogr.exe -f PostgreSQL PG:"dbname='stikstof' host='localhost' port='5432' user='postgres' password='system'" -nln gbif.0007494-250127130748423 "d:\projects\gbifdata\0007494-250127130748423.csv"
+c:\OSGeo4W\bin\ogr2ogr.exe -f PostgreSQL PG:"dbname='stikstof' host='localhost' port='5432' user='postgres' password='system'" -nln gbif.0007494-250127130748423 "d:\projects\gbifdata\0007494-250127130748423.csv" -progress -skipfailures -nlt NONE 
