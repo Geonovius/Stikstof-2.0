@@ -1,0 +1,1 @@
+c:\OSGeo4W\bin\ogr2ogr.exe -f GPKG "d:\projects\gbifdata\0007494-250127130748423.gpkg" "d:\projects\gbifdata\0007494-250127130748423.csv" -progress -skipfailures -nlt NONE 
