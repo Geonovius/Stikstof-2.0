@@ -1,6 +1,6 @@
-setx GDAL_DATA "c:\OSGeo4W\apps\gdal\share\gdal\"
-setx GDAL_DRIVER_PATH "c:\OSGeo4W\apps\gdal\lib\gdalplugins\"
-setx PROJ_LIB "c:\OSGeo4W\share\proj\"
-setx PYTHONPATH "c:\OSGeo4W\apps\Python312\"
+setx GDAL_DATA "d:\projects\Stikstof-2.0\gdal\bin\gdal-data"
+setx GDAL_DRIVER_PATH "d:\projects\Stikstof-2.0\gdal\bin\gdal\plugins\"
+setx PROJ_LIB "d:\projects\Stikstof-2.0\gdal\bin\proj9\share\"
+setx PYTHONPATH "d:\projects\Stikstof-2.0\gdal\bin\gdal\"
 
-c:\OSGeo4W\bin\ogr2ogr.exe -f GPKG "d:\projects\gbifdata\0007494-250127130748423.gpkg" "d:\projects\gbifdata\0007494-250127130748423.csv" -progress -skipfailures -nlt NONE 
+d:\projects\Stikstof-2.0\gdal\bin\gdal\apps\ogr2ogr.exe -f GPKG "d:\projects\gbifdata\0007494-250127130748423.gpkg" "d:\projects\gbifdata\0007494-250127130748423.csv" -progress -skipfailures -nlt NONE 
