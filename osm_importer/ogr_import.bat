@@ -1,0 +1,1 @@
+ogr2ogr -f "PostgreSQL" PG:"host=localhost port=5432 user='postgres' password='password' dbname=geodata" d:\geodata\osm.pbf -geomfield geom -overwrite -t_srs EPSG:28992
