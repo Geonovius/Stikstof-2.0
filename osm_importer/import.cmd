@@ -24,12 +24,13 @@ osm2pgsql.exe --verbose --number-processes 32 --extra-attributes --hstore-all --
 %pg% ddl\vw_powerlines.sql
 %pg% ddl\vw_pipelines.sql
 
-%pg% ddl\mv_pipelines.sql
-%pg% ddl\mv_powerlines.sql
-%pg% ddl\mv_railway.sql
-%pg% ddl\mv_roads.sql
-%pg% ddl\mv_vliegvelden.sql
-%pg% ddl\mv_water.sql
-%pg% ddl\mv_windturbines.sql
+rem -- deze scripts zijn niet nodig voor dit proces. Eventueel kun je deze later verwijderen. 
+rem %pg% ddl\mv_pipelines.sql
+rem %pg% ddl\mv_powerlines.sql
+rem %pg% ddl\mv_railway.sql
+rem %pg% ddl\mv_roads.sql
+rem %pg% ddl\mv_vliegvelden.sql
+rem %pg% ddl\mv_water.sql
+rem %pg% ddl\mv_windturbines.sql
 
 %pg% ddl\update_timestamp.sql
