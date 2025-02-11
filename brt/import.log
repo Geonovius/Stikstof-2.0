@@ -1,0 +1,431 @@
+GPKG: GeoPackage v1.2.0
+GDAL: GDALOpen(c:\Geodata4ETL\top10nl_compleet.gpkg, this=00000155AA66FF20) succeeds as GPKG.
+PG: Client encoding: 'UTF8'
+PG: PostGIS schema: 'public'
+PG: PostgreSQL version string : 'PostgreSQL 14.7 (Ubuntu 14.7-1.pgdg18.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit'
+PG: PostGIS version string : '3.2 USE_GEOS=1 USE_PROJ=1 USE_STATS=1'
+GDAL: GDALOpen(PG:dbname=gisdata-vggm user=vggm host='kaarten.vggm.nl' ACTIVE_SCHEMA='brt', this=00000155AC0D8E30) succeeds as PostgreSQL.
+Warning 6: Progress turned off as fast feature count is not available.
+PG: Primary key name (FID): id, type : int4
+PG: Using column 'id' as FID for table 'top10nl_inrichtingselement_lijn'
+PG: DeleteLayer(top10nl_inrichtingselement_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_inrichtingselement_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeinrichtingselement", m."hoogteniveau", m."hoogte", m."nummer", m."breedte", m."soortnaam", m."naam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_inrichtingselement_lijn" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50B7F0
+GDALVectorTranslate: 759622 features written in layer 'top10nl_inrichtingselement_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_plaats_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_plaats_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegebied", m."bebouwdekom", m."isbagwoonplaats", m."aantalinwoners", m."naamofficieel", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_plaats_punt" m)
+GPKG: finalize 00000155AC50B7F0
+GDALVectorTranslate: 6198 features written in layer 'top10nl_plaats_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_plantopografie_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_plantopografie_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeobject", m."naam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_plantopografie_vlak" m)
+GPKG: finalize 00000155AC50C5B0
+GDALVectorTranslate: 7 features written in layer 'top10nl_plantopografie_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_functioneel_gebied_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_functioneel_gebied_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typefunctioneelgebied", m."soortnaam", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_functioneel_gebied_vlak" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 45619 features written in layer 'top10nl_functioneel_gebied_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_functioneel_gebied_multivlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_functioneel_gebied_multivlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typefunctioneelgebied", m."soortnaam", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_functioneel_gebied_multivlak" m)
+GPKG: finalize 00000155AC50D0F0
+GDALVectorTranslate: 1713 features written in layer 'top10nl_functioneel_gebied_multivlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_waterdeel_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_waterdeel_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typewater", m."breedteklasse", m."hoofdafwatering", m."fysiekvoorkomen", m."voorkomen", m."hoogteniveau", m."functie", m."getijdeinvloed", m."vaarwegklasse", m."naamofficieel", m."naamnl", m."naamfries", m."isbagnaam", m."sluisnaam", m."brugnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_waterdeel_lijn" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50D5F0
+GDALVectorTranslate: 2867585 features written in layer 'top10nl_waterdeel_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_geografisch_gebied_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_geografisch_gebied_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegeografischgebied", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_geografisch_gebied_vlak" m)
+GPKG: finalize 00000155AC50D4B0
+GDALVectorTranslate: 16123 features written in layer 'top10nl_geografisch_gebied_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_geografisch_gebied_multivlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_geografisch_gebied_multivlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegeografischgebied", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_geografisch_gebied_multivlak" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 101 features written in layer 'top10nl_geografisch_gebied_multivlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_wegdeel_hartlijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_wegdeel_hartlijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeweg", m."hoogteniveau", m."typeinfrastructuur", m."hoofdverkeersgebruik", m."fysiekvoorkomen", m."verhardingsbreedteklasse", m."gescheidenrijbaan", m."verhardingstype", m."aantalrijstroken", m."status", m."awegnummer", m."nwegnummer", m."ewegnummer", m."swegnummer", m."afritnummer", m."afritnaam", m."isbagnaam", m."naam", m."knooppuntnaam", m."brugnaam", m."tunnelnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_wegdeel_hartlijn" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50C5B0
+GDALVectorTranslate: 2242317 features written in layer 'top10nl_wegdeel_hartlijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_wegdeel_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_wegdeel_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeweg", m."hoogteniveau", m."typeinfrastructuur", m."hoofdverkeersgebruik", m."fysiekvoorkomen", m."verhardingsbreedteklasse", m."verhardingstype", m."status", m."isbagnaam", m."naam", m."brugnaam", m."tunnelnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_wegdeel_punt" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 51294 features written in layer 'top10nl_wegdeel_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_spoorbaandeel_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_spoorbaandeel_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."spoorbreedte", m."aantalsporen", m."vervoerfunctie", m."elektrificatie", m."brugnaam", m."tunnelnaam", m."baanvaknaam", m."typespoorbaan", m."hoofdspoor", m."hoogteniveau", m."typeinfrastructuur", m."fysiekvoorkomen", m."status", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_spoorbaandeel_punt" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 4216 features written in layer 'top10nl_spoorbaandeel_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_plaats_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_plaats_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegebied", m."bebouwdekom", m."isbagwoonplaats", m."aantalinwoners", m."naamofficieel", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_plaats_vlak" m)
+GPKG: finalize 00000155AC50BA70
+GDALVectorTranslate: 8359 features written in layer 'top10nl_plaats_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_plaats_multivlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_plaats_multivlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegebied", m."bebouwdekom", m."isbagwoonplaats", m."aantalinwoners", m."naamofficieel", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_plaats_multivlak" m)
+GPKG: finalize 00000155AC50D230
+GDALVectorTranslate: 251 features written in layer 'top10nl_plaats_multivlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_registratief_gebied_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_registratief_gebied_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeregistratiefgebied", m."naamofficieel", m."naamnl", m."naamfries", m."nummer", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_registratief_gebied_vlak" m)
+GPKG: finalize 00000155AC50D0F0
+GDALVectorTranslate: 351 features written in layer 'top10nl_registratief_gebied_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_registratief_gebied_multivlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_registratief_gebied_multivlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeregistratiefgebied", m."naamofficieel", m."naamnl", m."naamfries", m."nummer", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_registratief_gebied_multivlak" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 5 features written in layer 'top10nl_registratief_gebied_multivlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_functioneel_gebied_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_functioneel_gebied_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typefunctioneelgebied", m."soortnaam", m."naamnl", m."naamfries", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_functioneel_gebied_punt" m)
+GPKG: finalize 00000155AC50D230
+GDALVectorTranslate: 2218 features written in layer 'top10nl_functioneel_gebied_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_hoogte_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_hoogte_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typehoogte", m."hoogte", m."referentievlak", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_hoogte_lijn" m)
+GPKG: finalize 00000155AC50C330
+GDALVectorTranslate: 63579 features written in layer 'top10nl_hoogte_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_wegdeel_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_wegdeel_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeweg", m."hoogteniveau", m."typeinfrastructuur", m."hoofdverkeersgebruik", m."fysiekvoorkomen", m."verhardingsbreedteklasse", m."gescheidenrijbaan", m."verhardingstype", m."aantalrijstroken", m."status", m."awegnummer", m."nwegnummer", m."ewegnummer", m."swegnummer", m."afritnummer", m."afritnaam", m."isbagnaam", m."naam", m."knooppuntnaam", m."brugnaam", m."tunnelnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_wegdeel_vlak" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50C830
+GDALVectorTranslate: 2955937 features written in layer 'top10nl_wegdeel_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_hoogte_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_hoogte_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typehoogte", m."hoogte", m."referentievlak", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_hoogte_punt" m)
+GPKG: finalize 00000155AC50BE30
+GDALVectorTranslate: 78901 features written in layer 'top10nl_hoogte_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_wegdeel_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_wegdeel_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeweg", m."hoogteniveau", m."typeinfrastructuur", m."hoofdverkeersgebruik", m."fysiekvoorkomen", m."verhardingsbreedteklasse", m."verhardingstype", m."status", m."isbagnaam", m."naam", m."brugnaam", m."tunnelnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_wegdeel_lijn" m)
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50C970
+GDALVectorTranslate: 192770 features written in layer 'top10nl_wegdeel_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_relief_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_relief_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typerelief", m."hoogteklasse", m."hoogteniveau", m."functie", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_relief_lijn" m)
+GPKG: finalize 00000155AC50CAB0
+GDALVectorTranslate: 48537 features written in layer 'top10nl_relief_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_wegdeel_hartpunt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_wegdeel_hartpunt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeweg", m."hoogteniveau", m."typeinfrastructuur", m."hoofdverkeersgebruik", m."fysiekvoorkomen", m."verhardingsbreedteklasse", m."gescheidenrijbaan", m."verhardingstype", m."aantalrijstroken", m."status", m."awegnummer", m."nwegnummer", m."ewegnummer", m."swegnummer", m."afritnummer", m."afritnaam", m."isbagnaam", m."naam", m."knooppuntnaam", m."brugnaam", m."tunnelnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_wegdeel_hartpunt" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50B7F0
+GDALVectorTranslate: 1182491 features written in layer 'top10nl_wegdeel_hartpunt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_waterdeel_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_waterdeel_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typewater", m."breedteklasse", m."hoofdafwatering", m."fysiekvoorkomen", m."voorkomen", m."hoogteniveau", m."functie", m."getijdeinvloed", m."vaarwegklasse", m."naamofficieel", m."naamnl", m."naamfries", m."isbagnaam", m."sluisnaam", m."brugnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_waterdeel_vlak" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50D5F0
+GDALVectorTranslate: 296953 features written in layer 'top10nl_waterdeel_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_relief_talud_hoge_zijde_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_relief_talud_hoge_zijde_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typerelief", m."hoogteklasse", m."hoogteniveau", m."functie", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_relief_talud_hoge_zijde_lijn" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50C6F0
+GDALVectorTranslate: 334834 features written in layer 'top10nl_relief_talud_hoge_zijde_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_gebouw_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_gebouw_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegebouw", m."fysiekvoorkomen", m."hoogteklasse", m."hoogteniveau", m."hoogte", m."status", m."soortnaam", m."naam", m."gebruiksdoel", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_gebouw_punt" m)
+GPKG: finalize 00000155AC50BE30
+GDALVectorTranslate: 16961 features written in layer 'top10nl_gebouw_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_terrein_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_terrein_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typelandgebruik", m."fysiekvoorkomen", m."voorkomen", m."hoogteniveau", m."naam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_terrein_vlak" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50D5F0
+GDALVectorTranslate: 2193144 features written in layer 'top10nl_terrein_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_spoorbaandeel_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_spoorbaandeel_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."spoorbreedte", m."aantalsporen", m."vervoerfunctie", m."elektrificatie", m."brugnaam", m."tunnelnaam", m."baanvaknaam", m."typespoorbaan", m."hoofdspoor", m."hoogteniveau", m."typeinfrastructuur", m."fysiekvoorkomen", m."status", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_spoorbaandeel_lijn" m)
+GPKG: finalize 00000155AC50D4B0
+GDALVectorTranslate: 16031 features written in layer 'top10nl_spoorbaandeel_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_inrichtingselement_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_inrichtingselement_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typeinrichtingselement", m."hoogteniveau", m."hoogte", m."nummer", m."breedte", m."soortnaam", m."naam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_inrichtingselement_punt" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50C970
+GDALVectorTranslate: 1191353 features written in layer 'top10nl_inrichtingselement_punt'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_gebouw_vlak)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_gebouw_vlak
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typegebouw", m."fysiekvoorkomen", m."hoogteklasse", m."hoogteniveau", m."hoogte", m."status", m."soortnaam", m."naam", m."gebruiksdoel", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_gebouw_vlak" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50BA70
+GDALVectorTranslate: 3221610 features written in layer 'top10nl_gebouw_vlak'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_relief_talud_lage_zijde_lijn)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_relief_talud_lage_zijde_lijn
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."mutatietype", m."objectbegintijd", m."tijdstipregistratie" FROM "top10nl_relief_talud_lage_zijde_lijn" m)
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+PG: PQputCopyEnd()
+GPKG: finalize 00000155AC50D4B0
+GDALVectorTranslate: 334834 features written in layer 'top10nl_relief_talud_lage_zijde_lijn'
+PG: PQputCopyEnd()
+PG: DeleteLayer(top10nl_waterdeel_punt)
+GDALVectorTranslate: Using FID=id and -preserve_fid
+PG: Could not retrieve table oid for top10nl_waterdeel_punt
+GDALVectorTranslate: Forcing transaction commit as table overwriting occurred
+GPKG: ResetStatement(SELECT m."id", m."geom", m."namespace", m."lokaalid", m."brontype", m."bronactualiteit", m."bronbeschrijving", m."bronnauwkeurigheid", m."mutatietype", m."typewater", m."breedteklasse", m."hoofdafwatering", m."fysiekvoorkomen", m."voorkomen", m."hoogteniveau", m."functie", m."getijdeinvloed", m."vaarwegklasse", m."naamofficieel", m."naamnl", m."naamfries", m."isbagnaam", m."sluisnaam", m."brugnaam", m."objectbegintijd", m."tijdstipregistratie", m."visualisatiecode", m."tdncode" FROM "top10nl_waterdeel_punt" m)
+GPKG: finalize 00000155AC50C470
+GDALVectorTranslate: 470 features written in layer 'top10nl_waterdeel_punt'
+PG: PQputCopyEnd()
+GDAL: GDALClose(c:\Geodata4ETL\top10nl_compleet.gpkg, this=00000155AA66FF20)
+GDAL: GDALClose(PG:dbname=gisdata-vggm user=vggm host='kaarten.vggm.nl' ACTIVE_SCHEMA='brt', this=00000155AC0D8E30)
+GDAL: In GDALDestroy - unloading GDAL shared library.
