@@ -1,217 +1,104 @@
 <!DOCTYPE model>
 <Option type="Map">
   <Option name="children" type="Map">
-    <Option name="gdal:importvectorintopostgisdatabaseavailableconnections_1" type="Map">
+    <Option name="native:buffer_1" type="Map">
       <Option value="true" name="active" type="bool"/>
       <Option name="alg_config"/>
-      <Option value="gdal:importvectorintopostgisdatabaseavailableconnections" name="alg_id" type="QString"/>
+      <Option value="native:buffer" name="alg_id" type="QString"/>
       <Option value="" name="color" type="QString"/>
       <Option name="comment" type="Map">
         <Option value="" name="color" type="QString"/>
         <Option value="" name="component_description" type="QString"/>
         <Option value="60" name="component_height" type="double"/>
-        <Option value="544" name="component_pos_x" type="double"/>
-        <Option value="501" name="component_pos_y" type="double"/>
+        <Option value="506" name="component_pos_x" type="double"/>
+        <Option value="548" name="component_pos_y" type="double"/>
         <Option value="100" name="component_width" type="double"/>
         <Option value="true" name="outputs_collapsed" type="bool"/>
         <Option value="true" name="parameters_collapsed" type="bool"/>
       </Option>
-      <Option value="Export to PostgreSQL (available connections)" name="component_description" type="QString"/>
+      <Option value="Buffer" name="component_description" type="QString"/>
       <Option value="30" name="component_height" type="double"/>
-      <Option value="344" name="component_pos_x" type="double"/>
-      <Option value="546" name="component_pos_y" type="double"/>
+      <Option value="306" name="component_pos_x" type="double"/>
+      <Option value="593" name="component_pos_y" type="double"/>
       <Option value="200" name="component_width" type="double"/>
       <Option name="dependencies"/>
-      <Option value="gdal:importvectorintopostgisdatabaseavailableconnections_1" name="id" type="QString"/>
-      <Option name="outputs"/>
+      <Option value="native:buffer_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="mv_habitats_per_n2000_regio_250m" type="Map">
+          <Option value="native:buffer_1" name="child_id" type="QString"/>
+          <Option value="" name="color" type="QString"/>
+          <Option name="comment" type="Map">
+            <Option value="" name="color" type="QString"/>
+            <Option value="" name="component_description" type="QString"/>
+            <Option value="60" name="component_height" type="double"/>
+            <Option value="0" name="component_pos_x" type="double"/>
+            <Option value="0" name="component_pos_y" type="double"/>
+            <Option value="100" name="component_width" type="double"/>
+            <Option value="true" name="outputs_collapsed" type="bool"/>
+            <Option value="true" name="parameters_collapsed" type="bool"/>
+          </Option>
+          <Option value="mv_habitats_per_n2000_regio_250m" name="component_description" type="QString"/>
+          <Option value="30" name="component_height" type="double"/>
+          <Option value="506" name="component_pos_x" type="double"/>
+          <Option value="638" name="component_pos_y" type="double"/>
+          <Option value="200" name="component_width" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="mv_habitats_per_n2000_regio_250m" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+          <Option value="true" name="outputs_collapsed" type="bool"/>
+          <Option value="true" name="parameters_collapsed" type="bool"/>
+        </Option>
+      </Option>
       <Option value="true" name="outputs_collapsed" type="bool"/>
       <Option value="true" name="parameters_collapsed" type="bool"/>
       <Option name="params" type="Map">
-        <Option name="ADDFIELDS" type="List">
+        <Option name="DISSOLVE" type="List">
           <Option type="Map">
             <Option value="2" name="source" type="int"/>
             <Option value="false" name="static_value" type="bool"/>
           </Option>
         </Option>
-        <Option name="APPEND" type="List">
+        <Option name="DISTANCE" type="List">
           <Option type="Map">
             <Option value="2" name="source" type="int"/>
-            <Option value="false" name="static_value" type="bool"/>
+            <Option value="250" name="static_value" type="double"/>
           </Option>
         </Option>
-        <Option name="A_SRS" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option name="static_value" type="QgsCoordinateReferenceSystem">
-              <spatialrefsys nativeFormat="Wkt">
-                <wkt>PROJCRS["Amersfoort / RD New",BASEGEOGCRS["Amersfoort",DATUM["Amersfoort",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4289]],CONVERSION["RD New",METHOD["Oblique Stereographic",ID["EPSG",9809]],PARAMETER["Latitude of natural origin",52.1561605555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",5.38763888888889,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9999079,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",155000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",463000,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone."],BBOX[50.75,3.2,53.7,7.22]],ID["EPSG",28992]]</wkt>
-                <proj4>+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs</proj4>
-                <srsid>2517</srsid>
-                <srid>28992</srid>
-                <authid>EPSG:28992</authid>
-                <description>Amersfoort / RD New</description>
-                <projectionacronym>sterea</projectionacronym>
-                <ellipsoidacronym>EPSG:7004</ellipsoidacronym>
-                <geographicflag>false</geographicflag>
-              </spatialrefsys>
-            </Option>
-          </Option>
-        </Option>
-        <Option name="CLIP" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="false" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="DATABASE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="Stikstof 2.0" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="DIM" type="List">
+        <Option name="END_CAP_STYLE" type="List">
           <Option type="Map">
             <Option value="2" name="source" type="int"/>
             <Option value="0" name="static_value" type="int"/>
-          </Option>
-        </Option>
-        <Option name="GEOCOLUMN" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="geom" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="GT" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="GTYPE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="0" name="static_value" type="int"/>
-          </Option>
-        </Option>
-        <Option name="INDEX" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="false" name="static_value" type="bool"/>
           </Option>
         </Option>
         <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option value="native:mergevectorlayers_1" name="child_id" type="QString"/>
-            <Option value="OUTPUT" name="output_name" type="QString"/>
-            <Option value="1" name="source" type="int"/>
+            <Option value="2" name="source" type="int"/>
+            <Option value="base_geometries_relevant_habitats_e3680181_6d17_4d3f_8e39_f6cf38e11e06" name="static_value" type="QString"/>
           </Option>
         </Option>
-        <Option name="LAUNDER" type="List">
+        <Option name="JOIN_STYLE" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="0" name="static_value" type="int"/>
+          </Option>
+        </Option>
+        <Option name="MITER_LIMIT" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="2" name="static_value" type="double"/>
+          </Option>
+        </Option>
+        <Option name="SEGMENTS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="5" name="static_value" type="int"/>
+          </Option>
+        </Option>
+        <Option name="SEPARATE_DISJOINT" type="List">
           <Option type="Map">
             <Option value="2" name="source" type="int"/>
             <Option value="false" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="MAKEVALID" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="true" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="OPTIONS" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="https://github.com/Geonovius/Stikstof-2.0-2025/issues/79" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="OVERWRITE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="true" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="PK" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="id" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="PRECISION" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="true" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="PRIMARY_KEY" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="PROMOTETOMULTI" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="false" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="SCHEMA" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="krd" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="SEGMENTIZE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="SHAPE_ENCODING" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="SIMPLIFY" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="SKIPFAILURES" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="true" name="static_value" type="bool"/>
-          </Option>
-        </Option>
-        <Option name="SPAT" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option name="static_value" type="invalid"/>
-          </Option>
-        </Option>
-        <Option name="S_SRS" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option name="static_value" type="invalid"/>
-          </Option>
-        </Option>
-        <Option name="TABLE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="merged_krd" name="static_value" type="QString"/>
-          </Option>
-        </Option>
-        <Option name="T_SRS" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option name="static_value" type="invalid"/>
-          </Option>
-        </Option>
-        <Option name="WHERE" type="List">
-          <Option type="Map">
-            <Option value="2" name="source" type="int"/>
-            <Option value="" name="static_value" type="QString"/>
           </Option>
         </Option>
       </Option>
@@ -299,7 +186,32 @@
       </Option>
     </Option>
   </Option>
-  <Option name="designerParameterValues"/>
+  <Option name="designerParameterValues" type="Map">
+    <Option name="krd_merge" type="QgsProcessingOutputLayerDefinition">
+      <Option type="Map">
+        <Option name="create_options" type="Map">
+          <Option value="windows-1252" name="fileEncoding" type="QString"/>
+        </Option>
+        <Option name="sink" type="Map">
+          <Option value="true" name="active" type="bool"/>
+          <Option value="1" name="type" type="int"/>
+          <Option value="TEMPORARY_OUTPUT" name="val" type="QString"/>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="mv_habitats_per_n2000_regio_250m" type="QgsProcessingOutputLayerDefinition">
+      <Option type="Map">
+        <Option name="create_options" type="Map">
+          <Option value="windows-1252" name="fileEncoding" type="QString"/>
+        </Option>
+        <Option name="sink" type="Map">
+          <Option value="true" name="active" type="bool"/>
+          <Option value="1" name="type" type="int"/>
+          <Option value="TEMPORARY_OUTPUT" name="val" type="QString"/>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
   <Option name="groupBoxes"/>
   <Option name="help"/>
   <Option value="Version2" name="internal_version" type="QString"/>
@@ -325,6 +237,24 @@
       <Option value="krd_merge" name="name" type="QString"/>
       <Option value="sink" name="parameter_type" type="QString"/>
       <Option value="false" name="supports_append" type="bool"/>
+      <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="mv_habitats_per_n2000_regio_250m" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="2" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option value="mv_habitats_per_n2000_regio_250m" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option value="" name="help" type="QString"/>
+      <Option name="metadata" type="Map">
+        <Option value="native:buffer_1" name="_modelChildId" type="QString"/>
+        <Option value="mv_habitats_per_n2000_regio_250m" name="_modelChildOutputName" type="QString"/>
+        <Option value="native" name="_modelChildProvider" type="QString"/>
+      </Option>
+      <Option value="mv_habitats_per_n2000_regio_250m" name="name" type="QString"/>
+      <Option value="sink" name="parameter_type" type="QString"/>
+      <Option value="true" name="supports_append" type="bool"/>
       <Option value="true" name="supports_non_file_outputs" type="bool"/>
     </Option>
   </Option>
