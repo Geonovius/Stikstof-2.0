@@ -1,6 +1,126 @@
 <!DOCTYPE model>
 <Option type="Map">
   <Option name="children" type="Map">
+    <Option name="gdal:dissolve_1" type="Map">
+      <Option value="true" name="active" type="bool"/>
+      <Option name="alg_config"/>
+      <Option value="gdal:dissolve" name="alg_id" type="QString"/>
+      <Option value="" name="color" type="QString"/>
+      <Option name="comment" type="Map">
+        <Option value="" name="color" type="QString"/>
+        <Option value="" name="component_description" type="QString"/>
+        <Option value="60" name="component_height" type="double"/>
+        <Option value="991.0378461910043" name="component_pos_x" type="double"/>
+        <Option value="80.54392783649365" name="component_pos_y" type="double"/>
+        <Option value="100" name="component_width" type="double"/>
+        <Option value="true" name="outputs_collapsed" type="bool"/>
+        <Option value="true" name="parameters_collapsed" type="bool"/>
+      </Option>
+      <Option value="Dissolve" name="component_description" type="QString"/>
+      <Option value="30" name="component_height" type="double"/>
+      <Option value="791.0378461910043" name="component_pos_x" type="double"/>
+      <Option value="125.54392783649365" name="component_pos_y" type="double"/>
+      <Option value="200" name="component_width" type="double"/>
+      <Option name="dependencies" type="List">
+        <Option type="Map">
+          <Option value="native:fixgeometries_1" name="child_id" type="QString"/>
+          <Option value="" name="conditional_branch" type="QString"/>
+        </Option>
+      </Option>
+      <Option value="gdal:dissolve_1" name="id" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Dissolved_habitats" type="Map">
+          <Option value="gdal:dissolve_1" name="child_id" type="QString"/>
+          <Option value="" name="color" type="QString"/>
+          <Option name="comment" type="Map">
+            <Option value="" name="color" type="QString"/>
+            <Option value="" name="component_description" type="QString"/>
+            <Option value="60" name="component_height" type="double"/>
+            <Option value="0" name="component_pos_x" type="double"/>
+            <Option value="0" name="component_pos_y" type="double"/>
+            <Option value="100" name="component_width" type="double"/>
+            <Option value="true" name="outputs_collapsed" type="bool"/>
+            <Option value="true" name="parameters_collapsed" type="bool"/>
+          </Option>
+          <Option value="Dissolved_habitats" name="component_description" type="QString"/>
+          <Option value="30" name="component_height" type="double"/>
+          <Option value="991.0378461910043" name="component_pos_x" type="double"/>
+          <Option value="170.54392783649365" name="component_pos_y" type="double"/>
+          <Option value="200" name="component_width" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option value="false" name="mandatory" type="bool"/>
+          <Option value="Dissolved_habitats" name="name" type="QString"/>
+          <Option value="OUTPUT" name="output_name" type="QString"/>
+          <Option value="true" name="outputs_collapsed" type="bool"/>
+          <Option value="true" name="parameters_collapsed" type="bool"/>
+        </Option>
+      </Option>
+      <Option value="true" name="outputs_collapsed" type="bool"/>
+      <Option value="true" name="parameters_collapsed" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="COMPUTE_AREA" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="false" name="static_value" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="COMPUTE_STATISTICS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="false" name="static_value" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="COUNT_FEATURES" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="false" name="static_value" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="EXPLODE_COLLECTIONS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="false" name="static_value" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="FIELD" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="natura2000_area_name" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="GEOMETRY" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="geometry" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option value="native:fixgeometries_1" name="child_id" type="QString"/>
+            <Option value="OUTPUT" name="output_name" type="QString"/>
+            <Option value="1" name="source" type="int"/>
+          </Option>
+        </Option>
+        <Option name="KEEP_ATTRIBUTES" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="false" name="static_value" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="OPTIONS" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="STATISTICS_ATTRIBUTE" type="List">
+          <Option type="Map">
+            <Option value="2" name="source" type="int"/>
+            <Option value="" name="static_value" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
     <Option name="native:buffer_1" type="Map">
       <Option value="true" name="active" type="bool"/>
       <Option name="alg_config"/>
@@ -23,7 +143,7 @@
       <Option value="232.05289437295812" name="component_width" type="double"/>
       <Option name="dependencies" type="List">
         <Option type="Map">
-          <Option value="native:fixgeometries_1" name="child_id" type="QString"/>
+          <Option value="gdal:dissolve_1" name="child_id" type="QString"/>
           <Option value="" name="conditional_branch" type="QString"/>
         </Option>
       </Option>
@@ -78,7 +198,7 @@
         </Option>
         <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option value="native:fixgeometries_1" name="child_id" type="QString"/>
+            <Option value="gdal:dissolve_1" name="child_id" type="QString"/>
             <Option value="OUTPUT" name="output_name" type="QString"/>
             <Option value="1" name="source" type="int"/>
           </Option>
@@ -423,6 +543,23 @@
       <Option value="sink" name="parameter_type" type="QString"/>
       <Option value="true" name="supports_append" type="bool"/>
       <Option value="true" name="supports_non_file_outputs" type="bool"/>
+    </Option>
+    <Option name="dissolved_habitats" type="Map">
+      <Option value="true" name="create_by_default" type="bool"/>
+      <Option value="-1" name="data_type" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option value="Dissolved_habitats" name="description" type="QString"/>
+      <Option value="0" name="flags" type="int"/>
+      <Option value="" name="help" type="QString"/>
+      <Option name="metadata" type="Map">
+        <Option value="gdal:dissolve_1" name="_modelChildId" type="QString"/>
+        <Option value="Dissolved_habitats" name="_modelChildOutputName" type="QString"/>
+        <Option value="gdal" name="_modelChildProvider" type="QString"/>
+      </Option>
+      <Option value="dissolved_habitats" name="name" type="QString"/>
+      <Option value="vectorDestination" name="parameter_type" type="QString"/>
+      <Option value="false" name="supports_non_file_outputs" type="bool"/>
     </Option>
     <Option name="intersection_dieren_habitats" type="Map">
       <Option value="true" name="create_by_default" type="bool"/>
