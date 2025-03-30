@@ -1,0 +1,15 @@
+-- aerius.v_hexagons_above_kdw_deposition_bufferdistance source
+
+CREATE OR REPLACE VIEW aerius.v_hexagons_above_kdw_deposition_bufferdistance
+AS SELECT row_number() OVER () AS row_number,
+    st_union(st_buffer(geom, buffer_distance)) AS st_union
+   FROM aerius.v_hexagons_above_kdw_deposition;
+
+COMMENT ON VIEW aerius.v_hexagons_above_kdw_deposition_bufferdistance IS 'Bufferdistance = 4 * %KDW overschrijding vanuit N-totaal. 
+
+Bufferzones is een samenvoeging van alle hexagonen met een overschrijding van de KDW > 100%';
+
+-- Permissions
+
+ALTER TABLE aerius.v_hexagons_above_kdw_deposition_bufferdistance OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_hexagons_above_kdw_deposition_bufferdistance TO postgres;

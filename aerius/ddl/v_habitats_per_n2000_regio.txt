@@ -1,0 +1,14 @@
+-- aerius.v_habitats_per_n2000_regio source
+
+CREATE OR REPLACE VIEW aerius.v_habitats_per_n2000_regio
+AS SELECT st_union(st_makevalid(geom)) AS st_union,
+    natura2000_area_name
+   FROM aerius."base_geometries:relevant_habitats"
+  GROUP BY natura2000_area_name;
+
+COMMENT ON VIEW aerius.v_habitats_per_n2000_regio IS 'https://github.com/Geonovius/Stikstof-2.0/issues/81';
+
+-- Permissions
+
+ALTER TABLE aerius.v_habitats_per_n2000_regio OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_habitats_per_n2000_regio TO postgres;

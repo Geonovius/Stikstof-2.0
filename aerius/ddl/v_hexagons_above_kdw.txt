@@ -1,0 +1,21 @@
+-- aerius.v_hexagons_above_kdw source
+
+CREATE OR REPLACE VIEW aerius.v_hexagons_above_kdw
+AS SELECT id,
+    geom,
+    receptor_id,
+    zoom_level,
+    relevant,
+    exceeding,
+    above_cl,
+    extra_assessment,
+    critical_deposition
+   FROM aerius."base_geometries:hexagons"
+  WHERE above_cl = true;
+
+COMMENT ON VIEW aerius.v_hexagons_above_kdw IS 'Hexagonen met deposities boven de KDW';
+
+-- Permissions
+
+ALTER TABLE aerius.v_hexagons_above_kdw OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_hexagons_above_kdw TO postgres;

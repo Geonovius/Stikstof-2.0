@@ -1,0 +1,13 @@
+-- aerius.v_habitats_per_n2000 source
+
+CREATE OR REPLACE VIEW aerius.v_habitats_per_n2000
+AS SELECT row_number() OVER () AS row_number,
+    st_union(st_makevalid(geom)) AS st_union,
+    natura2000_area_name
+   FROM aerius."base_geometries:relevant_habitats"
+  GROUP BY natura2000_area_name;
+
+-- Permissions
+
+ALTER TABLE aerius.v_habitats_per_n2000 OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_habitats_per_n2000 TO postgres;

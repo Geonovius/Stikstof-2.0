@@ -1,0 +1,20 @@
+-- aerius.t_habitats_per_n2000 definition
+
+-- Drop table
+
+-- DROP TABLE aerius.t_habitats_per_n2000;
+
+CREATE TABLE aerius.t_habitats_per_n2000 (
+	id serial4 NOT NULL,
+	geom public.geometry(multipolygon, 28992) NULL,
+	natura2000_area_id int4 NULL,
+	natura2000_area_name varchar NULL,
+	CONSTRAINT t_habitats_per_n2000_pkey PRIMARY KEY (id)
+);
+CREATE INDEX sidx_t_habitats_per_n2000_geom ON aerius.t_habitats_per_n2000 USING gist (geom);
+COMMENT ON TABLE aerius.t_habitats_per_n2000 IS 'https://github.com/Geonovius/Stikstof-2.0/issues/81';
+
+-- Permissions
+
+ALTER TABLE aerius.t_habitats_per_n2000 OWNER TO postgres;
+GRANT ALL ON TABLE aerius.t_habitats_per_n2000 TO postgres;

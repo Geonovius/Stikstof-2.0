@@ -1,0 +1,19 @@
+-- aerius.v_hexagons_above_kdw_deposition source
+
+CREATE OR REPLACE VIEW aerius.v_hexagons_above_kdw_deposition
+AS SELECT a.id,
+    a.geom,
+    a.critical_deposition,
+    a.receptor_id,
+    b.total_deposition,
+    round(b.total_deposition / a.critical_deposition * 100::double precision) AS kdw_overschrijdingspercentage,
+    round(b.total_deposition / a.critical_deposition * 100::double precision) * 4::double precision AS buffer_distance
+   FROM aerius.v_hexagons_above_kdw a
+     JOIN aerius.v_depositions_zoomlevel_is_1 b ON a.receptor_id = b.receptor_id;
+
+COMMENT ON VIEW aerius.v_hexagons_above_kdw_deposition IS 'combinatie van hexagonen met KDW en Hexagonen van de totale deposities. ';
+
+-- Permissions
+
+ALTER TABLE aerius.v_hexagons_above_kdw_deposition OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_hexagons_above_kdw_deposition TO postgres;

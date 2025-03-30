@@ -1,0 +1,15 @@
+-- aerius.v_kdw_percentages_reclassed source
+
+CREATE OR REPLACE VIEW aerius.v_kdw_percentages_reclassed
+AS SELECT row_number() OVER () AS row_number,
+    (st_dump(st_union(geom))).geom AS geom,
+    ceil(kdw_overschrijdingspercentage / 100::double precision) * 100::double precision AS ceil_kdw
+   FROM aerius.v_hexagons_above_kdw_deposition
+  GROUP BY (ceil(kdw_overschrijdingspercentage / 100::double precision) * 100::double precision);
+
+COMMENT ON VIEW aerius.v_kdw_percentages_reclassed IS 'https://github.com/Geonovius/Stikstof-2.0/issues/47';
+
+-- Permissions
+
+ALTER TABLE aerius.v_kdw_percentages_reclassed OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_kdw_percentages_reclassed TO postgres;

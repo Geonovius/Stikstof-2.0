@@ -1,0 +1,16 @@
+-- aerius.v_depositions_zoomlevel_is_1 source
+
+CREATE OR REPLACE VIEW aerius.v_depositions_zoomlevel_is_1
+AS SELECT id,
+    geom,
+    year,
+    receptor_id,
+    zoom_level,
+    total_deposition
+   FROM aerius."depositions:depositions"
+  WHERE zoom_level = 1;
+
+-- Permissions
+
+ALTER TABLE aerius.v_depositions_zoomlevel_is_1 OWNER TO postgres;
+GRANT ALL ON TABLE aerius.v_depositions_zoomlevel_is_1 TO postgres;
