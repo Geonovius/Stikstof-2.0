@@ -1,0 +1,49 @@
+*-----------------------directory layer---------------------------------*
+DATADIR        c:\Applics\OPS-Pro_2024\Data\
+*-----------------------identification layer----------------------------*
+PROJECT        Zee_NH3
+RUNID          Zee_NH3
+YEAR           2016
+*-----------------------substance layer---------------------------------*
+COMPCODE       3
+COMPNAME       NH3 (ammonium) - gas.
+MOLWEIGHT      17.0
+PHASE          1
+LOSS           1
+DDSPECTYPE     
+DDPARVALUE     
+WDSPECTYPE     
+WDPARVALUE     
+DIFFCOEFF      .240
+WASHOUT        0
+CONVRATE       EMEP
+LDCONVRATE     
+*-----------------------emission layer----------------------------------*
+EMFILE         d:\projects\Stikstof-2.0\Brondata_stikstof_RIVM_2017\brondata_v_28_jan_2020\brn_OPS_GCN2019\NH3_b_nos_ncp.brn
+USDVEFILE      
+USPSDFILE      
+EMCORFAC       1.0
+TARGETGROUP    0
+COUNTRY        0
+ROADS          
+*-----------------------receptor layer----------------------------------*
+RECEPTYPE      2
+XCENTER        
+YCENTER        
+NCOLS          
+NROWS          
+RESO           
+OUTER          
+RCPFILE        c:\Applics\OPS-Pro_2024\Data\Receptor\NL_EHS_500.rcp
+*-----------------------meteo & surface char layer----------------------*
+ROUGHNESS      0.0
+Z0FILE         c:\Applics\OPS-Pro_2024\Data\z0_jr_250_lgn2020.ops
+LUFILE         c:\Applics\OPS-Pro_2024\Data\lu_250_lgn2020.ops
+METEOTYPE      0
+MTFILE         C:\Applics\OPS-Pro_2024\Meteo\a023123c.*
+*-----------------------output layer------------------------------------*
+DEPUNIT        3
+PLTFILE        d:\_trash\Zee_NH3.tab
+PRNFILE        d:\_trash\Zee_NH3.lpt
+INCLUDE        0
+GUIMADE        1

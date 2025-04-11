@@ -1,0 +1,1 @@
+curl -X POST "https://connect.aerius.nl/api/v8/own2000/calculate" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -F "filePart=@calcinput_20250411_001657.gml" -H  "api-key: eca6e331e02b49139136926b3de7cc45" ['outputType'] = 'GML'
