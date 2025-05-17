@@ -1,0 +1,75 @@
+-- https://stackoverflow.com/questions/1490942/declare-a-variable-in-a-postgresql-query
+do
+$$
+declare 
+	counter record;	
+begin
+   for counter in SELECT distinct(natura2000_area_id) as id FROM aerius."base_geometries:relevant_habitats" order by id
+	loop
+		
+		raise notice 'Natura 2000: %', counter;
+		execute format('create MATERIALIZED VIEW stikstof.gbif.m_gbif2habitat_% AS SELECT observations.id,
+	    observations.geom,
+	    observations.gbifid,
+	    observations.datasetkey,
+	    observations.occurrenceid,
+	    observations.kingdom,
+	    observations.phylum,
+	    observations.class,
+	    observations."order",
+	    observations.family,
+	    observations.genus,
+	    observations.species,
+	    observations.infraspecificepithet,
+	    observations.taxonrank,
+	    observations.scientificname,
+	    observations.verbatimscientificname,
+	    observations.verbatimscientificnameauthorship,
+	    observations.countrycode,
+	    observations.locality,
+	    observations.stateprovince,
+	    observations.occurrencestatus,
+	    observations.individualcount,
+	    observations.publishingorgkey,
+	    observations.decimallatitude,
+	    observations.decimallongitude,
+	    observations.coordinateuncertaintyinmeters,
+	    observations.coordinateprecision,
+	    observations.elevation,
+	    observations.elevationaccuracy,
+	    observations.depth,
+	    observations.depthaccuracy,
+	    observations.eventdate,
+	    observations.day,
+	    observations.month,
+	    observations.year,
+	    observations.taxonkey,
+	    observations.specieskey,
+	    observations.basisofrecord,
+	    observations.institutioncode,
+	    observations.collectioncode,
+	    observations.catalognumber,
+	    observations.recordnumber,
+	    observations.identifiedby,
+	    observations.dateidentified,
+	    observations.license,
+	    observations.rightsholder,
+	    observations.recordedby,
+	    observations.typestatus,
+	    observations.establishmentmeans,
+	    observations.lastinterpreted,
+	    observations.mediatype,
+	    observations.issue,
+	    habitats.natura2000_area_name,
+	    habitats.habitat_type_id,
+	    habitats.habitat_type_name,
+	    habitats.habitat_type_description,
+	    habitats.critical_deposition,
+	    habitats.coverage
+	   from gbif."0001329-250426092105405" observations
+	     JOIN aerius."base_geometries:relevant_habitats" habitats ON st_contains(habitats.geom, observations.geom)
+	     where habitats.natura2000_area_id = %
+		WITH NO DATA;', counter);
+   end loop;
+end;
+$$;
