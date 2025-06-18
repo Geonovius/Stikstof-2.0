@@ -1,1 +1,0 @@
-d:\GDAL\ogr2ogr.exe -f "PostgreSQL" PG:"dbname='stikstof' host='localhost' port='5432' user='postgres' password='system'" -nln gbif.test "d:\projects\gbifdata\0012052-250415084134356\occurrence.txt" -progress -skipfailures -nlt NONE 
